@@ -63,9 +63,9 @@ def makeGroups(lines: list, step: int) -> list:
     return groups
 
 
-def rucksackScore(inputFile: str) -> int:
+def rucksackScore(input_file: str) -> int:
     letter_values = buildLetterValues(LETTERS, 1)
-    lines = processInput(inputFile)
+    lines = processInput(input_file)
     groups = makeGroups(lines, 3)
     score = 0
 

@@ -62,9 +62,9 @@ def processInput(filename: str) -> list:
     return input.readlines()
 
 
-def rucksackScore(inputFile: str) -> int:
+def rucksackScore(input_file: str) -> int:
     letter_values = buildLetterValues(LETTERS, 1)
-    items = processInput(inputFile)
+    items = processInput(input_file)
     score = 0
 
     for item in items:
