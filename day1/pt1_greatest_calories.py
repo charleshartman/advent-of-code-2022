@@ -1,42 +1,26 @@
 # pt1_greatest_calories.py -- adventOfCode2022 - day1 - part1
 
-"""
-algorithm
-- read input into list
-- declare greatestElf = 0
-- declare currentElf = 0
-- iterate through list
-    - strip item of newline
-    - if item is False ('')
-        - if currentElf > greatestElf
-            - greatestElf = currentElf
-        - currentElf = 0
-    - else
-        - convert item to number and add it to currentElf
-- return greatestElf
-"""
 
-
-def processInput(filename: str) -> list:
+def process_input(filename: str) -> list:
     input = open(filename, "r")
     return input.readlines()
 
 
-def getMostCalories(inputFile: str) -> int:
-    items = processInput(inputFile)
-    greatestElf = 0
-    currentElf = 0
+def get_most_calories(input_file: str) -> int:
+    items = process_input(input_file)
+    greatest_elf = 0
+    current_elf = 0
 
     for item in items:
         item = item.strip()
         if not item:
-            if currentElf > greatestElf:
-                greatestElf = currentElf
-            currentElf = 0
+            if current_elf > greatest_elf:
+                greatest_elf = current_elf
+            current_elf = 0
         else:
-            currentElf += int(item)
+            current_elf += int(item)
 
-    return greatestElf
+    return greatest_elf
 
 
-print(getMostCalories("elves_input.txt"))
+print(get_most_calories("elves_input.txt"))

@@ -3,13 +3,13 @@
 OUTCOMES = {"A X": 4, "A Y": 8, "A Z": 3, "B X": 1, "B Y": 5, "B Z": 9, "C X": 7, "C Y": 2, "C Z": 6}
 
 
-def processInput(filename: str) -> list:
+def process_input(filename: str) -> list:
     input = open(filename, "r")
     return input.readlines()
 
 
-def totalScore(inputFile: str) -> int:
-    items = processInput(inputFile)
+def total_score(input_file: str) -> int:
+    items = process_input(input_file)
     score = 0
 
     for item in items:
@@ -18,4 +18,4 @@ def totalScore(inputFile: str) -> int:
     return score
 
 
-print(totalScore("rps_input.txt"))
+print(total_score("rps_input.txt"))
